@@ -263,21 +263,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-Ia-nJW"/>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="Mo2-lB-Wna">
-                                <items>
-                                    <barButtonItem title="Ma Position" id="pEC-tH-Rxm"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eCM-Ia-nJW" firstAttribute="trailing" secondItem="Nia-ub-aDN" secondAttribute="trailing" type="default" id="1Py-5d-Ap7"/>
-                            <constraint firstItem="Mo2-lB-Wna" firstAttribute="trailing" secondItem="Nia-ub-aDN" secondAttribute="trailing" type="default" id="4lS-s5-vam"/>
                             <constraint firstItem="eCM-Ia-nJW" firstAttribute="bottom" secondItem="Nia-ub-aDN" secondAttribute="bottom" type="default" id="BWL-MI-EJF"/>
+                            <constraint firstItem="eCM-Ia-nJW" firstAttribute="top" secondItem="Nia-ub-aDN" secondAttribute="top" type="default" id="DzQ-ST-r6N"/>
                             <constraint firstItem="eCM-Ia-nJW" firstAttribute="leading" secondItem="Nia-ub-aDN" secondAttribute="leading" type="default" id="RlQ-b1-Zae"/>
-                            <constraint firstItem="Mo2-lB-Wna" firstAttribute="top" secondItem="Nia-ub-aDN" secondAttribute="top" type="default" id="Vbf-wf-gYK"/>
-                            <constraint firstItem="Mo2-lB-Wna" firstAttribute="leading" secondItem="Nia-ub-aDN" secondAttribute="leading" type="default" id="g6F-Uu-Qax"/>
-                            <constraint firstItem="eCM-Ia-nJW" firstAttribute="top" secondItem="Mo2-lB-Wna" secondAttribute="bottom" type="default" id="qBI-B8-JrW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Autour de moi" id="e3r-m6-KSD"/>
