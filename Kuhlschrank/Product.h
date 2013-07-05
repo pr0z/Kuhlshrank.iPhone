@@ -12,5 +12,6 @@
 
 @property int ID;
 @property (strong, nonatomic) NSString * Libelle;
+@property int idCategory;
 
 @end

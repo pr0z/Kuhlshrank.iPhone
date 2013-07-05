@@ -31,6 +31,8 @@
 		D566B0791778874700A81CD0 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D566B0781778874700A81CD0 /* Storyboard_iPad.storyboard */; };
 		D56CD13E1786A9250053F4EC /* ApplicationUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CD13D1786A9250053F4EC /* ApplicationUser.m */; };
 		D56CD16C1786C0E90053F4EC /* iphoneSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CD16B1786C0E90053F4EC /* iphoneSettings.png */; };
+		D56CD16E178755380053F4EC /* saveIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CD16D178755380053F4EC /* saveIcon.png */; };
+		D56CD170178756CC0053F4EC /* updateIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CD16F178756CC0053F4EC /* updateIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		D56CD13C1786A9250053F4EC /* ApplicationUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationUser.h; sourceTree = "<group>"; };
 		D56CD13D1786A9250053F4EC /* ApplicationUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationUser.m; sourceTree = "<group>"; };
 		D56CD16B1786C0E90053F4EC /* iphoneSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneSettings.png; sourceTree = "<group>"; };
+		D56CD16D178755380053F4EC /* saveIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveIcon.png; sourceTree = "<group>"; };
+		D56CD16F178756CC0053F4EC /* updateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updateIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 		D566B05D1778870C00A81CD0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D56CD16F178756CC0053F4EC /* updateIcon.png */,
+				D56CD16D178755380053F4EC /* saveIcon.png */,
 				D56CD16B1786C0E90053F4EC /* iphoneSettings.png */,
 				D566B05E1778870C00A81CD0 /* Kuhlschrank-Info.plist */,
 				D566B05F1778870C00A81CD0 /* InfoPlist.strings */,
@@ -255,6 +261,8 @@
 				D566B0771778873900A81CD0 /* Storyboard_iPhone.storyboard in Resources */,
 				D566B0791778874700A81CD0 /* Storyboard_iPad.storyboard in Resources */,
 				D56CD16C1786C0E90053F4EC /* iphoneSettings.png in Resources */,
+				D56CD16E178755380053F4EC /* saveIcon.png in Resources */,
+				D56CD170178756CC0053F4EC /* updateIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

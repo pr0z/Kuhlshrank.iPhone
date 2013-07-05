@@ -41,6 +41,32 @@
     [VariableStore sharedInstance].currentUser = [self GiveUser];
     
     self.products = [NSMutableArray arrayWithArray:[[[VariableStore sharedInstance] service] GetProductList]];
+    
+    [self orderProducts];
+}
+
+- (void) orderProducts
+{
+    NSMutableArray * d = [[NSMutableArray alloc] init];
+    NSMutableArray * m = [[NSMutableArray alloc] init];
+    NSMutableArray * v = [[NSMutableArray alloc] init];
+    
+    for (Product * prod in self.products)
+    {
+        if (prod.idCategory == 1)
+            [d addObject:prod];
+        
+        if (prod.idCategory == 2)
+            [m addObject:prod];
+        
+        if (prod.idCategory == 3)
+            [v addObject:prod];
+    }
+    
+    self.drinks = [NSMutableArray arrayWithArray:d];
+    self.milkProducts = [NSMutableArray arrayWithArray:m];
+    self.vegetables = [NSMutableArray arrayWithArray:v];
+    
     [self.tableView reloadData];
 }
 
@@ -54,12 +80,43 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.products.count;;
+    if(section == 0)
+    {
+        return self.drinks.count;
+    }
+    else if(section == 1)
+    {
+        return self.milkProducts.count;
+    }
+    else if (section == 2)
+    {
+        return self.vegetables.count;
+    }
+    else
+        return 0;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if(section == 0)
+    {
+        return @"Boisson";
+    }
+    else if(section == 1)
+    {
+        return @"Produits laitiers";
+    }
+    else if (section == 2)
+    {
+        return @"Légumes";
+    }
+    else
+        return @"";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,8 +128,29 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Product *product = [self.products objectAtIndex:indexPath.row];
-    cell.textLabel.text = [product.Libelle stringByAppendingString:@" x1"];
+    switch (indexPath.section) {
+        case 0:
+        {
+            Product *product = [self.drinks objectAtIndex:indexPath.row];
+            cell.textLabel.text = product.Libelle;
+        }
+            break;
+        case 1:
+        {
+            Product *product = [self.milkProducts objectAtIndex:indexPath.row];
+            cell.textLabel.text = product.Libelle;
+        }
+            break;
+        case 2:
+        {
+            Product *product = [self.vegetables objectAtIndex:indexPath.row];
+            cell.textLabel.text = product.Libelle;
+        }
+            break;
+            
+        default:
+            break;
+    }
     
     return cell;
 }
@@ -125,6 +203,7 @@
         return false;
     else
         return true;
+    return true;
 }
 
 -(void) clearTable
@@ -141,16 +220,21 @@
     NSFetchRequest * query = [[NSFetchRequest alloc]  initWithEntityName:@"ApplicationUser"];
     NSArray * result = [[[VariableStore sharedInstance] database] executeFetchRequest:query error:nil];
     
-    ApplicationUser *usr = [result objectAtIndex:0];
-    User * user = [[User alloc] init];
+    if (result.count != 0)
+    {
+        ApplicationUser *usr = [result objectAtIndex:0];
+        User * user = [[User alloc] init];
     
-    user.ID = usr.idUser;
-    user.Nom = usr.nom;
-    user.Prenom = usr.nom;
-    user.Mail = usr.mail;
-    user.Password = @"*********";
+        user.ID = usr.idUser;
+        user.Nom = usr.nom;
+        user.Prenom = usr.prenom;
+        user.Mail = usr.mail;
+        user.Password = @"*********";
     
-    return user;        
+        return user;
+    }
+    
+    return nil;
 }
 
 @end

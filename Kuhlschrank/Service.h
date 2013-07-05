@@ -14,6 +14,8 @@
 @property NSString * url;
 
 - (BOOL) LoginWithLogin:(NSString*)login AndPassword:(NSString*)password;
+- (void) UpdateUserWithId:(NSNumber *)uid Name:(NSString *) name FirstName:(NSString *)fname Mail:(NSString *) mail;
+- (void) GetUserById:(NSNumber *) uid;
 - (NSArray *) GetProductList;
 - (BOOL) CheckRegistrationForUser:(NSNumber *) userId AndDevice:(NSString *) deviceIdentifier;
 - (NSArray *) GetSupermarketWithLatitude:(NSString *)lat AndLongitude:(NSString *)lon;

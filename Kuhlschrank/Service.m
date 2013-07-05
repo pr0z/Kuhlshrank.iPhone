@@ -25,6 +25,22 @@
     return self;
 }
 
+- (void) GetUserById:(NSNumber *) uid
+{
+    NSString * baseUrl = [self.url stringByAppendingFormat:@"/User.svc/getbyid?id=%i", [uid integerValue]];
+    
+    id jsonAnswer = [self GetJsonAnswerWithUrl:baseUrl];
+    
+    User * user = [[User alloc] init];
+    user.ID = [NSNumber numberWithInt:[[jsonAnswer objectForKey:@"ID"] intValue]];
+    user.Mail = [jsonAnswer objectForKey:@"Mail"];
+    user.Nom = [jsonAnswer objectForKey:@"Nom"];
+    user.Prenom = [jsonAnswer objectForKey:@"Prenom"];
+    user.Password = @"*********";
+    
+    [VariableStore sharedInstance].currentUser = user;
+}
+
 - (BOOL) LoginWithLogin:(NSString*)login AndPassword:(NSString*)password
 {
     NSString * loginUrl = self.url;
@@ -41,7 +57,7 @@
     user.Mail = [jsonAnswer objectForKey:@"Mail"];
     user.Nom = [jsonAnswer objectForKey:@"Nom"];
     user.Prenom = [jsonAnswer objectForKey:@"Prenom"];
-    user.Password = [jsonAnswer objectForKey:@"Password"];
+    user.Password = @"*********";
     
     [VariableStore sharedInstance].currentUser = user;
     
@@ -60,6 +76,13 @@
     return true;
 }
 
+- (void) UpdateUserWithId:(NSNumber *)uid Name:(NSString *) name FirstName:(NSString *)fname Mail:(NSString *) mail
+{
+    NSString * baseUrl = [self.url stringByAppendingFormat:@"/User.svc/updateUser?id=%i&n=%@&f=%@&m=%@", [uid integerValue], name, fname, mail];
+    
+    [self GetJsonAnswerWithUrl:baseUrl];
+}
+
 - (NSArray *) GetProductList
 {
     NSString * webUrl = [self.url stringByAppendingString:@"/Product.svc/getall"];
@@ -73,6 +96,7 @@
         Product *product = [[Product alloc] init];
         product.ID = [[prod objectForKey:@"ID"] intValue];
         product.Libelle = [prod objectForKey:@"Libelle"];
+        product.idCategory = [[prod objectForKey:@"IdCategory"] integerValue];
         
         [products addObject:product];
     }
@@ -132,7 +156,6 @@
     
     [self GetJsonAnswerWithUrl:baseUrl];
 }
-
 
 - (void) DeleteDevice:(NSString *) uid
 {
