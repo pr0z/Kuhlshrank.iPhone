@@ -37,7 +37,7 @@
         return false;
     
     User * user = [[User alloc] init];
-    user.ID = [[jsonAnswer objectForKey:@"ID"] intValue];
+    user.ID = [NSNumber numberWithInt:[[jsonAnswer objectForKey:@"ID"] intValue]];
     user.Mail = [jsonAnswer objectForKey:@"Mail"];
     user.Nom = [jsonAnswer objectForKey:@"Nom"];
     user.Prenom = [jsonAnswer objectForKey:@"Prenom"];
@@ -49,7 +49,7 @@
     
     ApplicationUser * appUser = (ApplicationUser *)[NSEntityDescription insertNewObjectForEntityForName:@"ApplicationUser" inManagedObjectContext:db];
     
-    appUser.idUser = [NSNumber numberWithInt:user.ID];
+    appUser.idUser = user.ID;
     appUser.mail = user.Mail;
     appUser.nom = user.Nom;
     appUser.prenom = user.Prenom;
@@ -116,19 +116,33 @@
     return markets;
 }
 
-- (BOOL) CheckRegistrationForUser:(int)userId AndDevince:(NSString *)deviceIdentifier
+- (BOOL) CheckRegistrationForUser:(NSNumber *)userId AndDevice:(NSString *)deviceIdentifier
 {
-    //NSString * webUrl = [self.url stringByAppendingString:[NSString stringWithFormat:@"/Device.svc/checkFromIandU?i=%@&u=%i", deviceIdentifier, userId]];
+    NSString * webUrl = [self.url stringByAppendingString:[NSString stringWithFormat:@"/Device.svc/checkFromIandU?i=%@&u=%i", deviceIdentifier, [userId integerValue]]];
     
-    //NSLog(@"%@", webUrl);
+    id jsonAnswer = [self GetJsonAnswerWithUrl:webUrl];
     
-    //id jsonAnswer = [self GetJsonAnswerWithUrl:webUrl];
-    return true;
+    return [jsonAnswer boolValue];
 }
 
 
+- (void) RegisterDevice:(NSString *) type IdentifiedBy:(NSString *) uId ForUser:(NSNumber *) userId
+{
+    NSString * baseUrl = [self.url stringByAppendingFormat:@"/Device.svc/registerDevice?type=%@&uid=%@&userId=%i", type, uId, [userId integerValue]];
+    
+    [self GetJsonAnswerWithUrl:baseUrl];
+}
+
+
+- (void) DeleteDevice:(NSString *) uid
+{
+    NSString * baserUrl = [self.url stringByAppendingFormat:@"/Device.svc/deleteDevice?uid=%@", uid];
+    [self GetJsonAnswerWithUrl:baserUrl];
+}
+
 - (id) GetJsonAnswerWithUrl:(NSString *) webUrl
 {
+    webUrl = [webUrl stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     NSURL * url = [NSURL URLWithString:webUrl];
     NSData * data = [NSData dataWithContentsOfURL:url];
     

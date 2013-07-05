@@ -29,8 +29,8 @@
 		D566B06D1778870C00A81CD0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D566B06C1778870C00A81CD0 /* Default-568h@2x.png */; };
 		D566B0771778873900A81CD0 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D566B0761778873900A81CD0 /* Storyboard_iPhone.storyboard */; };
 		D566B0791778874700A81CD0 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D566B0781778874700A81CD0 /* Storyboard_iPad.storyboard */; };
-		D56CD1371786A2450053F4EC /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CD1361786A2450053F4EC /* Place.m */; };
 		D56CD13E1786A9250053F4EC /* ApplicationUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CD13D1786A9250053F4EC /* ApplicationUser.m */; };
+		D56CD16C1786C0E90053F4EC /* iphoneSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CD16B1786C0E90053F4EC /* iphoneSettings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,10 +68,9 @@
 		D566B06C1778870C00A81CD0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D566B0761778873900A81CD0 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
 		D566B0781778874700A81CD0 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
-		D56CD1351786A2450053F4EC /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
-		D56CD1361786A2450053F4EC /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
 		D56CD13C1786A9250053F4EC /* ApplicationUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationUser.h; sourceTree = "<group>"; };
 		D56CD13D1786A9250053F4EC /* ApplicationUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationUser.m; sourceTree = "<group>"; };
+		D56CD16B1786C0E90053F4EC /* iphoneSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneSettings.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +92,6 @@
 		D55148D51785553D0047C8AF /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				D56CD13C1786A9250053F4EC /* ApplicationUser.h */,
-				D56CD13D1786A9250053F4EC /* ApplicationUser.m */,
-				D56CD1361786A2450053F4EC /* Place.m */,
-				D56CD1351786A2450053F4EC /* Place.h */,
 				D55148D9178556230047C8AF /* Service.h */,
 				D55148DA178556230047C8AF /* Service.m */,
 				D55148DC17855EEE0047C8AF /* VariableStore.h */,
@@ -157,6 +152,7 @@
 		D566B05D1778870C00A81CD0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D56CD16B1786C0E90053F4EC /* iphoneSettings.png */,
 				D566B05E1778870C00A81CD0 /* Kuhlschrank-Info.plist */,
 				D566B05F1778870C00A81CD0 /* InfoPlist.strings */,
 				D566B0621778870C00A81CD0 /* main.m */,
@@ -194,6 +190,8 @@
 		D56CD1381786A2520053F4EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D56CD13D1786A9250053F4EC /* ApplicationUser.m */,
+				D56CD13C1786A9250053F4EC /* ApplicationUser.h */,
 				D55148F11785CF6B0047C8AF /* KuhlschrankModel.xcdatamodeld */,
 			);
 			name = Model;
@@ -256,6 +254,7 @@
 				D566B06D1778870C00A81CD0 /* Default-568h@2x.png in Resources */,
 				D566B0771778873900A81CD0 /* Storyboard_iPhone.storyboard in Resources */,
 				D566B0791778874700A81CD0 /* Storyboard_iPad.storyboard in Resources */,
+				D56CD16C1786C0E90053F4EC /* iphoneSettings.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +276,6 @@
 				D55148F31785CF6B0047C8AF /* KuhlschrankModel.xcdatamodeld in Sources */,
 				D5514932178605190047C8AF /* MapViewController.m in Sources */,
 				D551493517860D270047C8AF /* Location.m in Sources */,
-				D56CD1371786A2450053F4EC /* Place.m in Sources */,
 				D56CD13E1786A9250053F4EC /* ApplicationUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

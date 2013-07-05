@@ -10,7 +10,6 @@
 #import "VariableStore.h"
 #import "AppDelegate.h"
 #import "ApplicationUser.h"
-#import "Place.h"
 
 @interface FridgeBrowserViewController ()
 
@@ -31,11 +30,15 @@
 {
     [super viewDidLoad];
     
+    //[self clearTable];
+    
     bool firstLogin = [self checkFirstConnection];
     
     if (firstLogin)
         if (![[VariableStore sharedInstance] isConnected])
             [self showLoginView];
+        
+    [VariableStore sharedInstance].currentUser = [self GiveUser];
     
     self.products = [NSMutableArray arrayWithArray:[[[VariableStore sharedInstance] service] GetProductList]];
     [self.tableView reloadData];
@@ -122,6 +125,32 @@
         return false;
     else
         return true;
+}
+
+-(void) clearTable
+{
+    NSFetchRequest * query = [[NSFetchRequest alloc]  initWithEntityName:@"ApplicationUser"];
+    NSArray * users = [[[VariableStore sharedInstance] database] executeFetchRequest:query error:nil];
+    
+    for (ApplicationUser *user in users)
+        [[[VariableStore sharedInstance] database] deleteObject:user];
+}
+
+- (User *) GiveUser
+{
+    NSFetchRequest * query = [[NSFetchRequest alloc]  initWithEntityName:@"ApplicationUser"];
+    NSArray * result = [[[VariableStore sharedInstance] database] executeFetchRequest:query error:nil];
+    
+    ApplicationUser *usr = [result objectAtIndex:0];
+    User * user = [[User alloc] init];
+    
+    user.ID = usr.idUser;
+    user.Nom = usr.nom;
+    user.Prenom = usr.nom;
+    user.Mail = usr.mail;
+    user.Password = @"*********";
+    
+    return user;        
 }
 
 @end

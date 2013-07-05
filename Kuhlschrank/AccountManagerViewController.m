@@ -28,7 +28,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.uniqueIdentifier = [[UIDevice currentDevice] uniqueIdentifier];
+    
+    self.nameLabel.text = [[VariableStore sharedInstance] currentUser].Nom;
+    self.firstNameLabel.text = [[VariableStore sharedInstance] currentUser].Prenom;
+    self.mailLabel.text = [[VariableStore sharedInstance] currentUser].Mail;
+    self.passwordLabel.text = [[VariableStore sharedInstance] currentUser].Password;
+    self.ButtonLabel.font = [UIFont fontWithName:@"System Bold" size:15.0];
+    
+    [self DrawButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,15 +56,31 @@
 
 - (IBAction)RegisterDevice:(id)sender {
     User *user = [[VariableStore sharedInstance] currentUser];
-    
     NSString *type = [UIDevice currentDevice].model;
     
-    NSLog(@"%@", type);
+    Service * service = [VariableStore sharedInstance].service;
     
-    NSString * uniqueId = [[UIDevice currentDevice] uniqueIdentifier];
-    NSLog(@"%@", uniqueId);
+    if (self.modeInsert)
+        [service RegisterDevice:type IdentifiedBy:self.uniqueIdentifier ForUser:user.ID];
+    else
+        [service DeleteDevice:self.uniqueIdentifier];
     
-    [[[VariableStore sharedInstance] service] CheckRegistrationForUser:user.ID AndDevince:uniqueId];
-    
+    [self DrawButton];
+}
+
+- (void) DrawButton
+{
+    if ([[[VariableStore sharedInstance] service] CheckRegistrationForUser:[[VariableStore sharedInstance] currentUser].ID AndDevice:self.uniqueIdentifier])
+    {
+        self.ButtonLabel.textColor = [UIColor redColor];
+        self.ButtonLabel.text = @"Supprimer cet appareil";
+        self.modeInsert = NO;
+    }
+    else
+    {
+        self.ButtonLabel.textColor = [UIColor blackColor];
+        self.ButtonLabel.text = @"Enregistrer cet appreil";
+        self.modeInsert = YES;
+    }
 }
 @end

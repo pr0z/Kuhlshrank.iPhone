@@ -28,6 +28,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = 48.878335;
     zoomLocation.longitude = 2.384588;
