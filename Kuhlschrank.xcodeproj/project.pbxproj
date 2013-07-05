@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D55148DB178556230047C8AF /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = D55148DA178556230047C8AF /* Service.m */; };
+		D55148DE17855EEE0047C8AF /* VariableStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D55148DD17855EEE0047C8AF /* VariableStore.m */; };
+		D55148E117858F7D0047C8AF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D55148E017858F7D0047C8AF /* User.m */; };
+		D55148E41785A3860047C8AF /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = D55148E31785A3860047C8AF /* Product.m */; };
+		D55148ED1785B4440047C8AF /* FridgeBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D55148EC1785B4440047C8AF /* FridgeBrowserViewController.m */; };
+		D55148F01785BFEF0047C8AF /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D55148EF1785BFEF0047C8AF /* AccountManagerViewController.m */; };
+		D55148F31785CF6B0047C8AF /* KuhlschrankModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D55148F11785CF6B0047C8AF /* KuhlschrankModel.xcdatamodeld */; };
+		D551492F1786024A0047C8AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D551492E1786024A0047C8AF /* MapKit.framework */; };
+		D5514932178605190047C8AF /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5514931178605190047C8AF /* MapViewController.m */; };
+		D551493517860D270047C8AF /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D551493417860D270047C8AF /* Location.m */; };
+		D566B0551778870C00A81CD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D566B0541778870C00A81CD0 /* UIKit.framework */; };
+		D566B0571778870C00A81CD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D566B0561778870C00A81CD0 /* Foundation.framework */; };
+		D566B0591778870C00A81CD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D566B0581778870C00A81CD0 /* CoreGraphics.framework */; };
+		D566B05B1778870C00A81CD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D566B05A1778870C00A81CD0 /* CoreData.framework */; };
+		D566B0611778870C00A81CD0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D566B05F1778870C00A81CD0 /* InfoPlist.strings */; };
+		D566B0631778870C00A81CD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D566B0621778870C00A81CD0 /* main.m */; };
+		D566B0671778870C00A81CD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D566B0661778870C00A81CD0 /* AppDelegate.m */; };
+		D566B0691778870C00A81CD0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D566B0681778870C00A81CD0 /* Default.png */; };
+		D566B06B1778870C00A81CD0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D566B06A1778870C00A81CD0 /* Default@2x.png */; };
+		D566B06D1778870C00A81CD0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D566B06C1778870C00A81CD0 /* Default-568h@2x.png */; };
+		D566B0771778873900A81CD0 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D566B0761778873900A81CD0 /* Storyboard_iPhone.storyboard */; };
+		D566B0791778874700A81CD0 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D566B0781778874700A81CD0 /* Storyboard_iPad.storyboard */; };
+		D56CD1371786A2450053F4EC /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CD1361786A2450053F4EC /* Place.m */; };
+		D56CD13E1786A9250053F4EC /* ApplicationUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D56CD13D1786A9250053F4EC /* ApplicationUser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D55148D9178556230047C8AF /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		D55148DA178556230047C8AF /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
+		D55148DC17855EEE0047C8AF /* VariableStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableStore.h; sourceTree = "<group>"; };
+		D55148DD17855EEE0047C8AF /* VariableStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VariableStore.m; sourceTree = "<group>"; };
+		D55148DF17858F7D0047C8AF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D55148E017858F7D0047C8AF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D55148E21785A3860047C8AF /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		D55148E31785A3860047C8AF /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		D55148EB1785B4440047C8AF /* FridgeBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FridgeBrowserViewController.h; sourceTree = "<group>"; };
+		D55148EC1785B4440047C8AF /* FridgeBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FridgeBrowserViewController.m; sourceTree = "<group>"; };
+		D55148EE1785BFEF0047C8AF /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
+		D55148EF1785BFEF0047C8AF /* AccountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerViewController.m; sourceTree = "<group>"; };
+		D55148F21785CF6B0047C8AF /* KuhlschrankModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KuhlschrankModel.xcdatamodel; sourceTree = "<group>"; };
+		D551492E1786024A0047C8AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D5514930178605190047C8AF /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		D5514931178605190047C8AF /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D551493317860D270047C8AF /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		D551493417860D270047C8AF /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		D566B0511778870C00A81CD0 /* Kuhlschrank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuhlschrank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D566B0541778870C00A81CD0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D566B0561778870C00A81CD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D566B0581778870C00A81CD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D566B05A1778870C00A81CD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D566B05E1778870C00A81CD0 /* Kuhlschrank-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Kuhlschrank-Info.plist"; sourceTree = "<group>"; };
+		D566B0601778870C00A81CD0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D566B0621778870C00A81CD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D566B0641778870C00A81CD0 /* Kuhlschrank-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kuhlschrank-Prefix.pch"; sourceTree = "<group>"; };
+		D566B0651778870C00A81CD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D566B0661778870C00A81CD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D566B0681778870C00A81CD0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D566B06A1778870C00A81CD0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D566B06C1778870C00A81CD0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D566B0761778873900A81CD0 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
+		D566B0781778874700A81CD0 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
+		D56CD1351786A2450053F4EC /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
+		D56CD1361786A2450053F4EC /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
+		D56CD13C1786A9250053F4EC /* ApplicationUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationUser.h; sourceTree = "<group>"; };
+		D56CD13D1786A9250053F4EC /* ApplicationUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationUser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D566B04E1778870C00A81CD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D551492F1786024A0047C8AF /* MapKit.framework in Frameworks */,
+				D566B0551778870C00A81CD0 /* UIKit.framework in Frameworks */,
+				D566B0571778870C00A81CD0 /* Foundation.framework in Frameworks */,
+				D566B0591778870C00A81CD0 /* CoreGraphics.framework in Frameworks */,
+				D566B05B1778870C00A81CD0 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D55148D51785553D0047C8AF /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				D56CD13C1786A9250053F4EC /* ApplicationUser.h */,
+				D56CD13D1786A9250053F4EC /* ApplicationUser.m */,
+				D56CD1361786A2450053F4EC /* Place.m */,
+				D56CD1351786A2450053F4EC /* Place.h */,
+				D55148D9178556230047C8AF /* Service.h */,
+				D55148DA178556230047C8AF /* Service.m */,
+				D55148DC17855EEE0047C8AF /* VariableStore.h */,
+				D55148DD17855EEE0047C8AF /* VariableStore.m */,
+				D55148DF17858F7D0047C8AF /* User.h */,
+				D55148E017858F7D0047C8AF /* User.m */,
+				D55148E21785A3860047C8AF /* Product.h */,
+				D55148E31785A3860047C8AF /* Product.m */,
+				D551493317860D270047C8AF /* Location.h */,
+				D551493417860D270047C8AF /* Location.m */,
+			);
+			name = Business;
+			sourceTree = "<group>";
+		};
+		D566B0481778870B00A81CD0 = {
+			isa = PBXGroup;
+			children = (
+				D566B05C1778870C00A81CD0 /* Kuhlschrank */,
+				D566B0531778870C00A81CD0 /* Frameworks */,
+				D566B0521778870C00A81CD0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D566B0521778870C00A81CD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D566B0511778870C00A81CD0 /* Kuhlschrank.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D566B0531778870C00A81CD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D551492E1786024A0047C8AF /* MapKit.framework */,
+				D566B0541778870C00A81CD0 /* UIKit.framework */,
+				D566B0561778870C00A81CD0 /* Foundation.framework */,
+				D566B0581778870C00A81CD0 /* CoreGraphics.framework */,
+				D566B05A1778870C00A81CD0 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D566B05C1778870C00A81CD0 /* Kuhlschrank */ = {
+			isa = PBXGroup;
+			children = (
+				D56CD1381786A2520053F4EC /* Model */,
+				D55148D51785553D0047C8AF /* Business */,
+				D566B07D1778924F00A81CD0 /* ViewControllers */,
+				D566B07A1778876A00A81CD0 /* Storyboards */,
+				D566B0651778870C00A81CD0 /* AppDelegate.h */,
+				D566B0661778870C00A81CD0 /* AppDelegate.m */,
+				D566B05D1778870C00A81CD0 /* Supporting Files */,
+			);
+			path = Kuhlschrank;
+			sourceTree = "<group>";
+		};
+		D566B05D1778870C00A81CD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D566B05E1778870C00A81CD0 /* Kuhlschrank-Info.plist */,
+				D566B05F1778870C00A81CD0 /* InfoPlist.strings */,
+				D566B0621778870C00A81CD0 /* main.m */,
+				D566B0641778870C00A81CD0 /* Kuhlschrank-Prefix.pch */,
+				D566B0681778870C00A81CD0 /* Default.png */,
+				D566B06A1778870C00A81CD0 /* Default@2x.png */,
+				D566B06C1778870C00A81CD0 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D566B07A1778876A00A81CD0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D566B0781778874700A81CD0 /* Storyboard_iPad.storyboard */,
+				D566B0761778873900A81CD0 /* Storyboard_iPhone.storyboard */,
+			);
+			name = Storyboards;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D566B07D1778924F00A81CD0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D55148EB1785B4440047C8AF /* FridgeBrowserViewController.h */,
+				D55148EC1785B4440047C8AF /* FridgeBrowserViewController.m */,
+				D55148EE1785BFEF0047C8AF /* AccountManagerViewController.h */,
+				D55148EF1785BFEF0047C8AF /* AccountManagerViewController.m */,
+				D5514930178605190047C8AF /* MapViewController.h */,
+				D5514931178605190047C8AF /* MapViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D56CD1381786A2520053F4EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D55148F11785CF6B0047C8AF /* KuhlschrankModel.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D566B0501778870C00A81CD0 /* Kuhlschrank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D566B0731778870C00A81CD0 /* Build configuration list for PBXNativeTarget "Kuhlschrank" */;
+			buildPhases = (
+				D566B04D1778870C00A81CD0 /* Sources */,
+				D566B04E1778870C00A81CD0 /* Frameworks */,
+				D566B04F1778870C00A81CD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kuhlschrank;
+			productName = Kuhlschrank;
+			productReference = D566B0511778870C00A81CD0 /* Kuhlschrank.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D566B0491778870C00A81CD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Roman Leichnig";
+			};
+			buildConfigurationList = D566B04C1778870C00A81CD0 /* Build configuration list for PBXProject "Kuhlschrank" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D566B0481778870B00A81CD0;
+			productRefGroup = D566B0521778870C00A81CD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D566B0501778870C00A81CD0 /* Kuhlschrank */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D566B04F1778870C00A81CD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D566B0611778870C00A81CD0 /* InfoPlist.strings in Resources */,
+				D566B0691778870C00A81CD0 /* Default.png in Resources */,
+				D566B06B1778870C00A81CD0 /* Default@2x.png in Resources */,
+				D566B06D1778870C00A81CD0 /* Default-568h@2x.png in Resources */,
+				D566B0771778873900A81CD0 /* Storyboard_iPhone.storyboard in Resources */,
+				D566B0791778874700A81CD0 /* Storyboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D566B04D1778870C00A81CD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D566B0631778870C00A81CD0 /* main.m in Sources */,
+				D566B0671778870C00A81CD0 /* AppDelegate.m in Sources */,
+				D55148DB178556230047C8AF /* Service.m in Sources */,
+				D55148DE17855EEE0047C8AF /* VariableStore.m in Sources */,
+				D55148E117858F7D0047C8AF /* User.m in Sources */,
+				D55148E41785A3860047C8AF /* Product.m in Sources */,
+				D55148ED1785B4440047C8AF /* FridgeBrowserViewController.m in Sources */,
+				D55148F01785BFEF0047C8AF /* AccountManagerViewController.m in Sources */,
+				D55148F31785CF6B0047C8AF /* KuhlschrankModel.xcdatamodeld in Sources */,
+				D5514932178605190047C8AF /* MapViewController.m in Sources */,
+				D551493517860D270047C8AF /* Location.m in Sources */,
+				D56CD1371786A2450053F4EC /* Place.m in Sources */,
+				D56CD13E1786A9250053F4EC /* ApplicationUser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D566B05F1778870C00A81CD0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D566B0601778870C00A81CD0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D566B0711778870C00A81CD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D566B0721778870C00A81CD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D566B0741778870C00A81CD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kuhlschrank/Kuhlschrank-Prefix.pch";
+				INFOPLIST_FILE = "Kuhlschrank/Kuhlschrank-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D566B0751778870C00A81CD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kuhlschrank/Kuhlschrank-Prefix.pch";
+				INFOPLIST_FILE = "Kuhlschrank/Kuhlschrank-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D566B04C1778870C00A81CD0 /* Build configuration list for PBXProject "Kuhlschrank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D566B0711778870C00A81CD0 /* Debug */,
+				D566B0721778870C00A81CD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D566B0731778870C00A81CD0 /* Build configuration list for PBXNativeTarget "Kuhlschrank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D566B0741778870C00A81CD0 /* Debug */,
+				D566B0751778870C00A81CD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D55148F11785CF6B0047C8AF /* KuhlschrankModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D55148F21785CF6B0047C8AF /* KuhlschrankModel.xcdatamodel */,
+			);
+			currentVersion = D55148F21785CF6B0047C8AF /* KuhlschrankModel.xcdatamodel */;
+			path = KuhlschrankModel.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D566B0491778870C00A81CD0 /* Project object */;
+}
