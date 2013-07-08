@@ -50,6 +50,7 @@
     NSMutableArray * d = [[NSMutableArray alloc] init];
     NSMutableArray * m = [[NSMutableArray alloc] init];
     NSMutableArray * v = [[NSMutableArray alloc] init];
+    NSMutableArray * c = [[NSMutableArray alloc] init];
     
     for (Product * prod in self.products)
     {
@@ -61,11 +62,15 @@
         
         if (prod.idCategory == 3)
             [v addObject:prod];
+        
+        if (prod.idCategory == 4)
+            [c addObject:prod];
     }
     
     self.drinks = [NSMutableArray arrayWithArray:d];
     self.milkProducts = [NSMutableArray arrayWithArray:m];
     self.vegetables = [NSMutableArray arrayWithArray:v];
+    self.carnivor = [NSMutableArray arrayWithArray:c];
     
     [self.tableView reloadData];
 }
@@ -80,7 +85,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -96,6 +101,10 @@
     else if (section == 2)
     {
         return self.vegetables.count;
+    }
+    else if (section == 3)
+    {
+        return self.carnivor.count;
     }
     else
         return 0;
@@ -114,6 +123,10 @@
     else if (section == 2)
     {
         return @"Légumes";
+    }
+    else if (section == 3)
+    {
+        return @"Viandes";
     }
     else
         return @"";
@@ -147,7 +160,12 @@
             cell.textLabel.text = product.Libelle;
         }
             break;
-            
+        case 3:
+        {
+            Product *product = [self.carnivor objectAtIndex:indexPath.row];
+            cell.textLabel.text = product.Libelle;
+        }
+            break;
         default:
             break;
     }

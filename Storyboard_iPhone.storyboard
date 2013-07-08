@@ -28,7 +28,7 @@
                             <outlet property="delegate" destination="f89-2c-FoQ" id="TwX-uN-4UN"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Contenu" id="JP0-UI-DTV"/>
+                    <tabBarItem key="tabBarItem" title="Contenu" image="magnifier-icon.png" id="JP0-UI-DTV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uL4-JW-oF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,7 +232,7 @@
                             <constraint firstItem="u3g-lg-J10" firstAttribute="top" secondItem="oOL-j5-wHU" secondAttribute="top" constant="104" id="z9S-mg-U4v"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mon Compte" id="tjI-be-uM3"/>
+                    <tabBarItem key="tabBarItem" title="Mon Compte" image="user-icon.png" id="tjI-be-uM3"/>
                     <connections>
                         <outlet property="ButtonLabel" destination="Kdo-FM-WY4" id="neb-cs-3jQ"/>
                         <outlet property="RegistrationButton" destination="P9n-jk-m4R" id="fef-tg-lQr"/>
@@ -260,11 +260,11 @@
                         <constraints>
                             <constraint firstItem="eCM-Ia-nJW" firstAttribute="trailing" secondItem="Nia-ub-aDN" secondAttribute="trailing" type="default" id="1Py-5d-Ap7"/>
                             <constraint firstItem="eCM-Ia-nJW" firstAttribute="bottom" secondItem="Nia-ub-aDN" secondAttribute="bottom" type="default" id="BWL-MI-EJF"/>
-                            <constraint firstItem="eCM-Ia-nJW" firstAttribute="top" secondItem="Nia-ub-aDN" secondAttribute="top" type="default" id="DzQ-ST-r6N"/>
                             <constraint firstItem="eCM-Ia-nJW" firstAttribute="leading" secondItem="Nia-ub-aDN" secondAttribute="leading" type="default" id="RlQ-b1-Zae"/>
+                            <constraint firstItem="eCM-Ia-nJW" firstAttribute="top" secondItem="Nia-ub-aDN" secondAttribute="top" type="default" id="ZOQ-ba-hSQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Autour de moi" id="e3r-m6-KSD"/>
+                    <tabBarItem key="tabBarItem" title="Autour de moi" image="maps-icon.png" id="e3r-m6-KSD"/>
                     <connections>
                         <outlet property="mapView" destination="eCM-Ia-nJW" id="gRf-gE-dW5"/>
                     </connections>
@@ -297,14 +297,16 @@
     </scenes>
     <resources>
         <image name="iphoneSettings.png" width="640" height="960"/>
+        <image name="magnifier-icon.png" width="32" height="32"/>
+        <image name="maps-icon.png" width="32" height="32"/>
         <image name="updateIcon.png" width="24" height="24"/>
+        <image name="user-icon.png" width="32" height="32"/>
     </resources>
     <classes>
         <class className="AccountManagerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AccountManagerViewController.h"/>
             <relationships>
                 <relationship kind="action" name="RegisterDevice:"/>
-                <relationship kind="action" name="saveChanges:"/>
                 <relationship kind="action" name="updateFirstName:"/>
                 <relationship kind="action" name="updateMail:"/>
                 <relationship kind="action" name="updateName:"/>
@@ -322,6 +324,7 @@
         <class className="MapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
             <relationships>
+                <relationship kind="action" name="LocalizeShops:"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>

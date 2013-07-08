@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "User.h"
 #import "Service.h"
+#import "AppDelegate.h"
 
 @interface VariableStore : NSObject
 
@@ -16,6 +17,7 @@
 @property (strong, nonatomic) User * currentUser;
 @property (strong, nonatomic) Service *service;
 @property (strong, nonatomic) NSManagedObjectContext * database;
+@property (strong, nonatomic) AppDelegate * appDelegate;
 
 + (VariableStore *)sharedInstance;
 

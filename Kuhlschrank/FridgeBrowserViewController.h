@@ -8,6 +8,7 @@
 @property (strong, nonatomic) NSMutableArray * drinks;
 @property (strong, nonatomic) NSMutableArray * milkProducts;
 @property (strong, nonatomic) NSMutableArray * vegetables;
+@property (strong, nonatomic) NSMutableArray * carnivor;
 
 
 @property (strong, nonatomic) NSMutableArray *products;

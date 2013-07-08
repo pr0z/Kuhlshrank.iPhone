@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#include <CoreLocation/CLLocationManagerDelegate.h>
+#include <CoreLocation/CLError.h>
+#include <CoreLocation/CLLocation.h>
+#include <CoreLocation/CLLocationManager.h>
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) CLLocationManager * myLocationManager;
+@property (strong, nonatomic) CLLocation * myLocation;
+@property (strong, nonatomic) NSString * latitude;
+@property (strong, nonatomic) NSString * longitude;
+- (IBAction)LocalizeShops:(id)sender;
 
 @end
