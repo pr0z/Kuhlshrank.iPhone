@@ -12,7 +12,7 @@
 #import "ApplicationUser.h"
 #import "Location.h"
 
-#define kWebServiceUrl @"http://192.168.1.27:9999"
+#define kWebServiceUrl @"http://172.16.9.11"
 #define kPlaceApiUrlBegin @"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=";
 #define kPlaceApiUrlEnd @"&radius=500&types=grocery_or_supermarket&sensor=false&key=AIzaSyBoDh_b1KLF61ir3l28C8CIi3x07ZR-gpY";
 

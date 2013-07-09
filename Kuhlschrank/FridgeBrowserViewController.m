@@ -114,7 +114,7 @@
 {
     if(section == 0)
     {
-        return @"Boisson";
+        return @"Boissons";
     }
     else if(section == 1)
     {
